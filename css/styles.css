@@ -271,7 +271,4 @@ code { background: var(--bg-alt); padding: 0.1em 0.35em; border-radius: 4px; fon
 .site-footer { background: #07162a; color: #a9b8c9; padding: 1.75rem 0; font-size: 0.9rem; }
 .footer-inner { display: flex; flex-direction: column; gap: 0.75rem; align-items: center; text-align: center; }
 .footer-inner p { margin: 0; }
-.footer-links { list-style: none; margin: 0; padding: 0; display: flex; gap: 1.25rem; }
-.footer-links a { color: #d6e2ee; text-decoration: none; }
-.footer-links a:hover { color: var(--teal); }
 @media (min-width: 700px) { .footer-inner { flex-direction: row; justify-content: space-between; } }

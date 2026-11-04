@@ -39,7 +39,6 @@ All text is in **`index.html`**, split into clearly commented sections (`<!-- ==
 | Projects | `#projects`: each project is one `<article class="card">`. Copy/paste one to add a project, delete one to remove it. Use `tag-current` or `tag-past` for the status badge. |
 | Subteams | `#subteams`: one `<article class="subteam">` each. |
 | Application link | `#join`: replace `https://forms.gle/REPLACE_WITH_YOUR_FORM` |
-| Social links | `<footer>` |
 | Colours | Top of `css/styles.css`: `--navy`, `--teal`, `--teal-dark` (use `--teal-dark` for teal text on white so it stays readable) |
 
 ### Page images
@@ -137,7 +136,6 @@ See GitHub's docs: [Managing a custom domain for your GitHub Pages site](https:/
 
 - [ ] Add the Web3Forms access key
 - [ ] Add the real application form link
-- [ ] Update social links in the footer
 - [x] Add the team logo
 - [x] Add activity photos and project images
 - [ ] Link the CTV News story in the Highlights section
