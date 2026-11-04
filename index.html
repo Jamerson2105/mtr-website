@@ -37,6 +37,7 @@
       <nav id="site-nav" class="site-nav" aria-label="Main">
         <ul>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#highlights">Highlights</a></li>
           <li><a href="#subteams">Subteams</a></li>
           <li data-gallery-link><a href="#gallery">Gallery</a></li>
           <li><a href="#join">Join Us</a></li>
@@ -51,11 +52,11 @@
     <section id="home" class="hero">
       <div class="container hero-inner">
         <p class="eyebrow">University of Waterloo Student Design Team</p>
-        <h1>Robotics that responds when it matters most.</h1>
+        <h1>Robots that help when seconds matter.</h1>
         <p class="lead">
           UW MedTechRobotics designs and builds robotic systems for
           <strong>public safety</strong>, <strong>emergency response</strong> and
-          <strong>healthcare</strong>, giving students hands-on experience solving real problems.
+          <strong>healthcare</strong>, turning research into practical tools for real-world needs.
         </p>
         <div class="hero-actions">
           <a href="#projects" class="btn">See our projects</a>
@@ -64,23 +65,24 @@
       </div>
     </section>
 
-    <!-- ===================== INTRO / ABOUT ===================== -->
+    <!-- ===================== OUR VISION ===================== -->
     <section id="about" class="section">
       <div class="container split">
         <div>
-          <h2 class="section-title">Who we are</h2>
+          <h2 class="section-title">Our Vision</h2>
+          <p class="vision-quote">Robots that help when seconds matter.</p>
           <p>
-            We're a multidisciplinary team of Waterloo engineering, science and business students.
-            From autonomous navigation to patient monitoring, we take projects from concept to
-            tested prototype, combining software, electronics and mechanical design.
+            At University of Waterloo MedTechRobotics, we envision a future where advanced robotics
+            enhance public safety and emergency response. Our interdisciplinary design team is
+            dedicated to translating research into practical tools that meet real-world needs.
           </p>
           <ul class="stats">
             <li><span class="stat-num">3</span><span class="stat-label">Projects</span></li>
-            <li><span class="stat-num">4</span><span class="stat-label">Subteams</span></li>
-            <li><span class="stat-num">1</span><span class="stat-label">Mission</span></li>
+            <li><span class="stat-num">3</span><span class="stat-label">Awards</span></li>
+            <li><span class="stat-num">3</span><span class="stat-label">Subteams</span></li>
           </ul>
         </div>
-        <img class="rounded shadow" src="assets/img/team.svg" alt="UW MedTechRobotics team photo (placeholder)" width="1200" height="800" loading="lazy" />
+        <img class="rounded shadow" src="assets/img/team.webp" alt="Three UW MedTechRobotics members smiling beside their soft triaging robot at the Form and Function Challenge" width="984" height="651" loading="lazy" />
       </div>
     </section>
 
@@ -91,16 +93,17 @@
         <p class="section-sub">What we're building, and what we've built.</p>
 
         <div class="card-grid">
-          <!-- Project card: copy this <article> block to add a new project -->
+          <!-- Project card: copy this <article> block to add a new project.
+               style="object-position: ..." controls which part of the photo shows in the crop. -->
           <article class="card">
-            <img src="assets/img/project-boat.svg" alt="Autonomous boat (placeholder image)" width="800" height="500" loading="lazy" />
+            <img src="assets/img/project-drowning-search-robot.webp" alt="Team members standing behind the autonomous drowning-search robot, with a red life ring and navigation display" width="1000" height="750" loading="lazy" style="object-position: center 30%;" />
             <div class="card-body">
-              <span class="tag tag-current">Current</span>
-              <h3>Autonomous Boat</h3>
+              <span class="tag tag-current">Current project</span>
+              <h3>Autonomous Drowning-Search Robot</h3>
               <p>
-                An autonomous surface vessel for water-based search and response. Uses LiDAR for
-                obstacle avoidance and fused GNSS/IMU for waypoint navigation, built on ROS&nbsp;2
-                and tested in simulation.
+                An autonomous surface vessel that speeds up the locate-and-rescue window on open water.
+                It uses LiDAR for obstacle avoidance and fused GNSS/IMU for waypoint navigation, built
+                on ROS&nbsp;2 and tested in simulation.
               </p>
               <ul class="chips">
                 <li>ROS 2</li><li>LiDAR</li><li>GNSS/IMU</li><li>Simulation</li>
@@ -108,45 +111,65 @@
             </div>
           </article>
 
-          <!-- TODO: replace with your other current project(s) -->
           <article class="card">
-            <img src="assets/img/project-placeholder.svg" alt="Project placeholder image" width="800" height="500" loading="lazy" />
+            <img src="assets/img/project-soft-triaging-robot.webp" alt="Soft robotic gripper on a robot arm with pneumatic actuators, at the Form and Function Challenge" width="1000" height="1334" loading="lazy" style="object-position: center 50%;" />
             <div class="card-body">
-              <span class="tag tag-current">Current</span>
-              <h3>Project Name</h3>
+              <span class="tag tag-past">Past project · Form &amp; Function 2025</span>
+              <h3>Soft Medical Triaging Robot</h3>
               <p>
-                A short description of another current project: the problem it solves, the
-                approach, and where it's at. Replace this text in <code>index.html</code>.
+                Performs tasks to assess how urgently someone needs care, using body temperature,
+                oxygen saturation and heart rate. Won <strong>2nd Place and the Audience Award</strong>.
               </p>
               <ul class="chips">
-                <li>Tech</li><li>Stack</li><li>Here</li>
+                <li>Soft robotic gripper</li><li>Pneumatic actuation</li><li>Snap-on vitals wristband</li>
               </ul>
             </div>
           </article>
 
           <article class="card">
-            <img src="assets/img/project-wheelchair.svg" alt="Triage automation wheelchair (placeholder image)" width="800" height="500" loading="lazy" />
+            <img src="assets/img/project-assistive-dressing-robot.webp" alt="Robot arm holding a shirt to dress a medical manikin while a team member codes on a laptop" width="984" height="1287" loading="lazy" style="object-position: center 8%;" />
             <div class="card-body">
               <span class="tag tag-past">Past project</span>
-              <h3>Triage Automation Wheelchair</h3>
+              <h3>Assistive Dressing Robot</h3>
               <p>
-                A smart wheelchair to speed up emergency triage: monitors patient vitals, collects
-                symptom reports, and navigates autonomously to bring patients to care.
+                Our RCareWorld assistive dressing robot earned <strong>3rd Place</strong>.
               </p>
-              <ul class="chips">
-                <li>Vitals monitoring</li><li>Symptom reporting</li><li>Autonomous navigation</li>
-              </ul>
             </div>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- ===================== HIGHLIGHTS ===================== -->
+    <section id="highlights" class="section">
+      <div class="container split">
+        <div>
+          <h2 class="section-title">Past Highlights</h2>
+          <ul class="awards">
+            <li>
+              <span class="award-place">2nd Place + Audience Award</span>
+              <h3>Form &amp; Function Challenge 2025</h3>
+              <p>
+                For a soft actuator with built-in vital-sign detection, designed for safe and
+                conformative disaster-site triage to help first responders prioritize care.
+                Covered by <strong>CTV News</strong>.
+              </p>
+            </li>
+            <li>
+              <span class="award-place">3rd Place</span>
+              <h3>RCareWorld Assistive Dressing</h3>
+              <p>For our assistive dressing robot.</p>
+            </li>
+          </ul>
+        </div>
+        <img class="rounded shadow" src="assets/img/highlight-form-and-function.webp" alt="Group photo of competitors at the Form and Function Challenge 2025, holding glowing event signs" width="984" height="629" loading="lazy" />
+      </div>
+    </section>
+
     <!-- ===================== SUBTEAMS ===================== -->
-    <section id="subteams" class="section">
+    <section id="subteams" class="section section-alt">
       <div class="container">
         <h2 class="section-title">Subteams</h2>
-        <p class="section-sub">Find where you fit.</p>
 
         <div class="subteam-grid">
           <article class="subteam">
@@ -154,28 +177,18 @@
               <svg viewBox="0 0 24 24"><path d="M8 6 2 12l6 6M16 6l6 6-6 6"/></svg>
             </div>
             <h3>Software</h3>
-            <p>Autonomy, perception and controls on ROS&nbsp;2, from simulation to the real robot.</p>
           </article>
           <article class="subteam">
             <div class="icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>
             </div>
             <h3>Electrical</h3>
-            <p>Power systems, sensor integration, PCBs and embedded firmware that keep everything running.</p>
           </article>
           <article class="subteam">
             <div class="icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg>
             </div>
             <h3>Mechanical</h3>
-            <p>CAD, fabrication and structural design for robust platforms that survive real-world testing.</p>
-          </article>
-          <article class="subteam">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V10M10 21V4M15 21v-8M20 21V7"/></svg>
-            </div>
-            <h3>Business</h3>
-            <p>Sponsorship, finance, outreach and design that fuel the team and share our work.</p>
           </article>
         </div>
       </div>
@@ -187,10 +200,10 @@
       generated by: python3 scripts/optimize_images.py (see README).
       The section stays hidden until there is at least one photo.
     -->
-    <section id="gallery" class="section section-alt gallery-section" hidden>
+    <section id="gallery" class="section gallery-section" hidden>
       <div class="container">
         <h2 class="section-title">Life on the Team</h2>
-        <p class="section-sub">Build nights, testing days, competitions and everything in between.</p>
+        <p class="section-sub">Photos from our projects and competitions.</p>
       </div>
       <div class="gallery" aria-label="Team activity photos">
         <ul class="gallery-track"></ul>
@@ -199,28 +212,12 @@
 
     <!-- ===================== JOIN US ===================== -->
     <section id="join" class="section section-dark">
-      <div class="container split">
-        <div>
-          <h2 class="section-title">Join Us</h2>
-          <p>
-            We recruit at the start of every term and welcome students from <strong>all programs
-            and years</strong>, no prior experience required. If you're curious, motivated and
-            want to build robots that help people, we want to hear from you.
-          </p>
-          <ol class="steps">
-            <li><strong>Apply</strong> through our application form.</li>
-            <li><strong>Chat</strong> with subteam leads about your interests.</li>
-            <li><strong>Onboard</strong> and start contributing to a project.</li>
-          </ol>
-          <!-- TODO: replace href with your real application form link -->
-          <a class="btn" href="https://forms.gle/REPLACE_WITH_YOUR_FORM" target="_blank" rel="noopener">Apply now</a>
-          <p class="small muted-light">Questions first? <a href="#contact">Send us a message</a>.</p>
-        </div>
-        <ul class="perks">
-          <li><h3>Hands-on experience</h3><p>Work on real hardware and real software stacks used in industry.</p></li>
-          <li><h3>Meaningful impact</h3><p>Build technology aimed at saving time, and lives, in emergencies.</p></li>
-          <li><h3>Co-op ready</h3><p>Gain portfolio projects and skills employers look for.</p></li>
-        </ul>
+      <div class="container">
+        <h2 class="section-title">Join Us</h2>
+        <p>Want to build robots that matter?</p>
+        <!-- TODO: replace href with your real application form link -->
+        <a class="btn" href="https://forms.gle/REPLACE_WITH_YOUR_FORM" target="_blank" rel="noopener">Apply now</a>
+        <p class="small muted-light">Questions first? <a href="#contact">Send us a message</a>.</p>
       </div>
     </section>
 
@@ -230,7 +227,7 @@
         <div>
           <h2 class="section-title">Contact</h2>
           <p class="section-sub">
-            Sponsorship, collaboration or general questions? Send us a message and we'll get back to you.
+            Have a question? Send us a message.
           </p>
         </div>
 

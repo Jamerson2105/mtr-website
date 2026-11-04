@@ -108,7 +108,7 @@ code { background: var(--bg-alt); padding: 0.1em 0.35em; border-radius: 4px; fon
 .site-nav a:not(.btn):hover { color: var(--teal); }
 .site-nav .btn { margin-top: 0.5rem; text-align: center; }
 
-@media (min-width: 800px) {
+@media (min-width: 960px) {
   .nav-toggle { display: none; }
   .site-nav { position: static; display: block; background: none; border: 0; }
   .site-nav ul { display: flex; align-items: center; gap: 1.75rem; padding: 0; }
@@ -120,8 +120,8 @@ code { background: var(--bg-alt); padding: 0.1em 0.35em; border-radius: 4px; fon
 .hero {
   color: #fff;
   background:
-    linear-gradient(120deg, rgba(11, 31, 58, 0.94) 30%, rgba(15, 118, 110, 0.75)),
-    url("../assets/img/hero.svg") center / cover no-repeat;
+    linear-gradient(110deg, rgba(11, 31, 58, 0.95) 25%, rgba(11, 31, 58, 0.7) 60%, rgba(15, 118, 110, 0.55)),
+    url("../assets/img/hero.webp") center 35% / cover no-repeat;
   padding: clamp(4rem, 12vw, 8rem) 0;
 }
 .hero h1 { color: #fff; font-size: clamp(2.1rem, 6vw, 3.6rem); max-width: 18ch; }
@@ -153,6 +153,18 @@ code { background: var(--bg-alt); padding: 0.1em 0.35em; border-radius: 4px; fon
 .stat-num { display: block; font-size: 2.2rem; font-weight: 800; color: var(--teal-dark); line-height: 1; }
 .stat-label { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
 
+.vision-quote {
+  font-size: clamp(1.25rem, 2.8vw, 1.6rem); font-weight: 700; color: var(--teal-dark);
+  border-left: 4px solid var(--teal); padding-left: 1rem; margin: 1.25rem 0;
+}
+
+/* ---------- Highlights / awards ---------- */
+.awards { list-style: none; padding: 0; margin: 1.5rem 0 0; display: grid; gap: 1.25rem; }
+.awards li { padding: 1.25rem 1.4rem; border: 1px solid var(--border); border-left: 4px solid var(--teal); border-radius: var(--radius); background: #fff; }
+.awards h3 { font-size: 1.15rem; margin: 0.35rem 0 0.4rem; }
+.awards p { margin: 0; color: var(--muted); }
+.award-place { display: inline-block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 0.25rem 0.7rem; border-radius: 999px; background: var(--navy); color: var(--teal); }
+
 /* ---------- Project cards ---------- */
 .card-grid { display: grid; gap: 1.5rem; }
 @media (min-width: 640px) { .card-grid { grid-template-columns: repeat(2, 1fr); } }
@@ -178,23 +190,14 @@ code { background: var(--bg-alt); padding: 0.1em 0.35em; border-radius: 4px; fon
 .chips li { font-size: 0.78rem; padding: 0.2rem 0.6rem; border-radius: 6px; background: var(--bg-alt); color: var(--navy-2); border: 1px solid var(--border); }
 
 /* ---------- Subteams ---------- */
-.subteam-grid { display: grid; gap: 1.25rem; }
+.subteam-grid { display: grid; gap: 1.25rem; margin-top: 1.75rem; }
 @media (min-width: 600px) { .subteam-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1000px) { .subteam-grid { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 900px) { .subteam-grid { grid-template-columns: repeat(3, 1fr); } }
 .subteam { padding: 1.6rem; border: 1px solid var(--border); border-radius: var(--radius); background: #fff; }
-.subteam h3 { font-size: 1.15rem; margin-bottom: 0.35rem; }
-.subteam p { color: var(--muted); margin: 0; }
-.icon { width: 48px; height: 48px; border-radius: 12px; background: var(--navy); display: grid; place-items: center; margin-bottom: 1rem; }
+.subteam h3 { font-size: 1.15rem; margin: 0; }
+.subteam { display: flex; align-items: center; gap: 1rem; }
+.icon { width: 48px; height: 48px; border-radius: 12px; background: var(--navy); display: grid; place-items: center; flex: none; }
 .icon svg { width: 24px; height: 24px; fill: none; stroke: var(--teal); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-
-/* ---------- Join ---------- */
-.steps { padding-left: 1.2rem; margin: 1.25rem 0 1.75rem; }
-.steps li { margin-bottom: 0.4rem; }
-.steps strong { color: #fff; }
-.perks { list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem; }
-.perks li { padding: 1.25rem 1.4rem; border-radius: var(--radius); background: var(--navy-2); border-left: 4px solid var(--teal); }
-.perks h3 { font-size: 1.05rem; margin-bottom: 0.25rem; }
-.perks p { margin: 0; }
 
 /* ---------- Gallery (auto-scrolling strip) ---------- */
 .gallery-section { padding-bottom: clamp(3.5rem, 8vw, 6rem); }

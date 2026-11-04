@@ -6,7 +6,7 @@ It's plain HTML, CSS and JavaScript, so there's **no build step and nothing to i
 
 ```
 .
-├── index.html          # All page content (Home, Projects, Subteams, Gallery, Join Us, Contact)
+├── index.html          # All page content (Home, Vision, Projects, Highlights, Subteams, Gallery, Join Us, Contact)
 ├── css/styles.css      # All styling; team colours live at the top in :root
 ├── js/main.js          # Mobile menu, scrolling gallery, contact form submission
 ├── js/gallery-data.js  # List of gallery photos (auto-generated, see below)
@@ -34,26 +34,28 @@ All text is in **`index.html`**, split into clearly commented sections (`<!-- ==
 | What | Where |
 |---|---|
 | Hero headline / mission | `#home` section in `index.html` |
-| "Who we are" intro + stats | `#about` section |
+| "Our Vision" + stats | `#about` section |
+| Awards | `#highlights`: one `<li>` per award |
 | Projects | `#projects`: each project is one `<article class="card">`. Copy/paste one to add a project, delete one to remove it. Use `tag-current` or `tag-past` for the status badge. |
 | Subteams | `#subteams`: one `<article class="subteam">` each. |
 | Application link | `#join`: replace `https://forms.gle/REPLACE_WITH_YOUR_FORM` |
 | Social links | `<footer>` |
 | Colours | Top of `css/styles.css`: `--navy`, `--teal`, `--teal-dark` (use `--teal-dark` for teal text on white so it stays readable) |
 
-### Swapping images
+### Page images
 
-Placeholder images live in `assets/img/`:
+Images used directly on the page live in `assets/img/` (already compressed to WebP):
 
-| File | Used for | Suggested size |
-|---|---|---|
-| `logo.webp` | Header logo + browser tab icon (from `images/mtr_logo.webp`) | square |
-| `apple-touch-icon.png` | iPhone home-screen icon + link previews | 180×180 PNG |
-| `hero.svg` | Hero background (tinted by a navy/teal overlay) | 1600×900 |
-| `team.svg` | "Who we are" photo | 1200×800 |
-| `project-*.svg` | Project cards (cropped to 16:10) | 800×500 |
+| File | Used for |
+|---|---|
+| `logo.webp` | Header logo + browser tab icon (from `images/mtr_logo.webp`) |
+| `apple-touch-icon.png` | iPhone home-screen icon + link previews (180×180 PNG) |
+| `hero.webp` | Hero background (tinted by a navy/teal overlay, set in `.hero` in `css/styles.css`) |
+| `team.webp` | "Our Vision" photo |
+| `highlight-form-and-function.webp` | "Past Highlights" photo |
+| `project-*.webp` | Project cards (cropped to 16:10) |
 
-To use your own photo for one of these, compress it first (e.g. with [squoosh.app](https://squoosh.app), WebP, max 1600px wide), save it in `assets/img/`, and update the `src` and `alt` in `index.html`. If you replace the hero image, also update the `url(...)` in `.hero` in `css/styles.css`.
+To change one, compress the new photo (WebP, max 1600px wide; e.g. with [squoosh.app](https://squoosh.app)), save it in `assets/img/`, and update the `src`, `width`/`height` and `alt` in `index.html`. For portrait photos on project cards, adjust `style="object-position: center 30%;"` on the `<img>` to choose which part shows in the crop.
 
 ### Activity photo gallery
 
@@ -133,11 +135,11 @@ See GitHub's docs: [Managing a custom domain for your GitHub Pages site](https:/
 
 ## Checklist before launch
 
-- [ ] Replace the "Project Name" placeholder card with your real project(s)
 - [ ] Add the Web3Forms access key
 - [ ] Add the real application form link
 - [ ] Update social links in the footer
 - [x] Add the team logo
-- [ ] Add activity photos to `images/` and run `python3 scripts/optimize_images.py`
-- [ ] Swap the placeholder hero, team and project images
-- [ ] Confirm subteam descriptions and stats numbers
+- [x] Add activity photos and project images
+- [ ] Link the CTV News story in the Highlights section
+- [ ] Optional: add one-line descriptions under each subteam
+- [ ] Optional: add more detail to the Join Us section (when you recruit, who can apply)
