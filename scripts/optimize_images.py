@@ -32,7 +32,7 @@ EXTS = {".jpg", ".jpeg", ".png", ".webp", ".tif", ".tiff", ".bmp"}
 def caption(stem: str) -> str:
     text = re.sub(r"^\d+[-_ ]*", "", stem)          # drop "01-" ordering prefix
     text = re.sub(r"[-_]+", " ", text).strip()
-    return text[:1].upper() + text[1:] if text else "UW MedTechRobotics team activity"
+    return text[:1].upper() + text[1:] if text else "MedTech Robotics team activity"
 
 
 def main() -> None:

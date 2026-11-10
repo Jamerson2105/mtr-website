@@ -1,4 +1,4 @@
-// UW MedTechRobotics: site scripts (no dependencies)
+// MedTech Robotics: site scripts (no dependencies)
 
 document.addEventListener("DOMContentLoaded", () => {
   // ---- Footer year ----
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // ---- Activity gallery (auto-scrolling) ----
   buildGallery(window.GALLERY || []);
 
-  // ---- Contact form (Web3Forms) ----
+  // ---- Contact form (FormSubmit) ----
   const form = document.getElementById("contact-form");
   if (!form) return;
 
@@ -60,12 +60,6 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    const accessKey = form.querySelector('input[name="access_key"]').value;
-    if (!accessKey || accessKey.startsWith("YOUR_")) {
-      showStatus("error", "Contact form isn't configured yet. Please add a Web3Forms access key.");
-      return;
-    }
-
     button.disabled = true;
     button.textContent = "Sending…";
     showStatus("", "");
@@ -78,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       const data = await res.json().catch(() => ({}));
 
-      if (res.ok && data.success) {
+      if (res.ok && String(data.success) === "true") {
         showStatus("success", "Thanks! Your message has been sent. We'll get back to you soon.");
         form.reset();
         fields.forEach((f) => f.removeAttribute("aria-invalid"));

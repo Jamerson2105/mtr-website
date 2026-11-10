@@ -1,2 +1,7 @@
 # Windows download metadata
 *:Zone.Identifier
+
+# Desktop font files (license doesn't allow publishing them on the web)
+Fonts/
+*.otf
+*.ttf

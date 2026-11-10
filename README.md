@@ -1,12 +1,12 @@
-# UW MedTechRobotics Website
+# MedTech Robotics Website
 
-A static website for UW MedTechRobotics, a University of Waterloo student design team building robotics for public safety, emergency response and healthcare.
+A static website for MedTech Robotics, a University of Waterloo student design team building robotics for public safety, emergency response and healthcare.
 
 It's plain HTML, CSS and JavaScript, so there's **no build step and nothing to install**.
 
 ```
 .
-├── index.html          # All page content (Home, Vision, Projects, Highlights, Subteams, Gallery, Join Us, Contact)
+├── index.html          # All page content (Home, Vision, Projects, Highlights, Subteams, Gallery, Contact)
 ├── css/styles.css      # All styling; team colours live at the top in :root
 ├── js/main.js          # Mobile menu, scrolling gallery, contact form submission
 ├── js/gallery-data.js  # List of gallery photos (auto-generated, see below)
@@ -34,11 +34,11 @@ All text is in **`index.html`**, split into clearly commented sections (`<!-- ==
 | What | Where |
 |---|---|
 | Hero headline / mission | `#home` section in `index.html` |
-| "Our Vision" + stats | `#about` section |
+| "Our Vision" | `#about` section |
 | Awards | `#highlights`: one `<li>` per award |
 | Projects | `#projects`: each project is one `<article class="card">`. Copy/paste one to add a project, delete one to remove it. Use `tag-current` or `tag-past` for the status badge. |
 | Subteams | `#subteams`: one `<article class="subteam">` each. |
-| Application link | `#join`: replace `https://forms.gle/REPLACE_WITH_YOUR_FORM` |
+| Logo wordmark | `assets/img/wordmark.svg`: "MedTech Robotics" set in Quadrillion Semi-Bold, converted to outlines. The free Typodermic license allows logos but **not** embedding the font in a web page, so the site uses this image instead of `@font-face`. Keep the font files out of the repo. |
 | Colours | Top of `css/styles.css`: `--navy`, `--teal`, `--teal-dark` (use `--teal-dark` for teal text on white so it stays readable) |
 
 ### Page images
@@ -77,23 +77,16 @@ Tips:
 - To tweak a single caption, edit `js/gallery-data.js` directly, but re-running the script overwrites it.
 - Visitors whose system asks for reduced motion get a strip they swipe through by hand instead of auto-scrolling.
 
-## Contact form (Web3Forms)
+## Contact form (FormSubmit)
 
-The form sends messages straight to your team inbox through [Web3Forms](https://web3forms.com). You don't need a backend.
+The form emails messages to **aghilmurugan@gmail.com** through [FormSubmit](https://formsubmit.co). No backend or account needed.
 
-1. Go to <https://web3forms.com>, enter the **team email** you want messages delivered to, and you'll get an **access key** by email.
-2. In `index.html`, find:
-   ```html
-   <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
-   ```
-   and replace the value with your key. The access key is meant to be public, so it's fine to commit it.
-3. Submissions go to whatever email the key is linked to. To change the destination, generate a new key for the new email (or change it in the Web3Forms dashboard).
-
-How it works:
+- The destination address is in the form's `action` URL in `index.html`: `https://formsubmit.co/ajax/aghilmurugan@gmail.com`. Change the address there to route messages elsewhere.
+- **First-time activation:** the first submission sends a confirmation email to that address. Click the link in it, and later messages are delivered normally.
+- Optional: after activation, FormSubmit gives you a random alias string. Replace the email in the `action` URL with it so the address isn't visible in the page source.
 - `js/main.js` submits the form with `fetch`, so visitors stay on the page and see a green success or red error message.
-- The hidden `botcheck` checkbox is a **honeypot**. Real users never see it, and Web3Forms rejects submissions where a bot ticks it.
-- Until a real key is added, the form shows a "not configured yet" message instead of sending.
-- You can edit the email subject line via the hidden `subject` input.
+- The hidden `_honey` field is a **honeypot**. Real users never see it, and FormSubmit drops submissions where a bot fills it in.
+- Edit the email subject line via the hidden `_subject` input.
 
 ## Deploying to GitHub Pages
 
@@ -134,10 +127,8 @@ See GitHub's docs: [Managing a custom domain for your GitHub Pages site](https:/
 
 ## Checklist before launch
 
-- [ ] Add the Web3Forms access key
-- [ ] Add the real application form link
+- [ ] Confirm the FormSubmit activation email (send a test message first)
 - [x] Add the team logo
 - [x] Add activity photos and project images
 - [ ] Link the CTV News story in the Highlights section
 - [ ] Optional: add one-line descriptions under each subteam
-- [ ] Optional: add more detail to the Join Us section (when you recruit, who can apply)

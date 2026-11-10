@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>UW MedTechRobotics | University of Waterloo Design Team</title>
-  <meta name="description" content="UW MedTechRobotics is a University of Waterloo student design team building robotics for public safety, emergency response and healthcare." />
+  <title>MedTech Robotics | University of Waterloo Design Team</title>
+  <meta name="description" content="MedTech Robotics is a University of Waterloo student design team building robotics for public safety, emergency response and healthcare." />
   <meta name="theme-color" content="#0b1f3a" />
 
   <!-- Social sharing preview -->
-  <meta property="og:title" content="UW MedTechRobotics" />
+  <meta property="og:title" content="MedTech Robotics" />
   <meta property="og:description" content="Student-built robotics for public safety, emergency response and healthcare." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/img/apple-touch-icon.png" />
@@ -25,9 +25,9 @@
   <!-- ===================== HEADER / NAV ===================== -->
   <header class="site-header">
     <div class="container nav-bar">
-      <a class="brand" href="#home" aria-label="UW MedTechRobotics home">
+      <a class="brand" href="#home" aria-label="MedTech Robotics home">
         <img class="brand-logo" src="assets/img/logo.webp" alt="" width="40" height="40" />
-        <span>UW <strong>MedTech</strong>Robotics</span>
+        <img class="brand-wordmark" src="assets/img/wordmark.svg" alt="MedTech Robotics" width="270" height="20" />
       </a>
 
       <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
@@ -40,7 +40,6 @@
           <li><a href="#highlights">Highlights</a></li>
           <li><a href="#subteams">Subteams</a></li>
           <li data-gallery-link><a href="#gallery">Gallery</a></li>
-          <li><a href="#join">Join Us</a></li>
           <li><a href="#contact" class="btn btn-small">Contact</a></li>
         </ul>
       </nav>
@@ -54,13 +53,13 @@
         <p class="eyebrow">University of Waterloo Student Design Team</p>
         <h1>Robots that help when seconds matter.</h1>
         <p class="lead">
-          UW MedTechRobotics designs and builds robotic systems for
+          MedTech Robotics designs and builds robotic systems for
           <strong>public safety</strong>, <strong>emergency response</strong> and
           <strong>healthcare</strong>, turning research into practical tools for real-world needs.
         </p>
         <div class="hero-actions">
           <a href="#projects" class="btn">See our projects</a>
-          <a href="#join" class="btn btn-ghost">Join the team</a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
         </div>
       </div>
     </section>
@@ -72,17 +71,12 @@
           <h2 class="section-title">Our Vision</h2>
           <p class="vision-quote">Robots that help when seconds matter.</p>
           <p>
-            At University of Waterloo MedTechRobotics, we envision a future where advanced robotics
+            At MedTech Robotics, we envision a future where advanced robotics
             enhance public safety and emergency response. Our interdisciplinary design team is
             dedicated to translating research into practical tools that meet real-world needs.
           </p>
-          <ul class="stats">
-            <li><span class="stat-num">3</span><span class="stat-label">Projects</span></li>
-            <li><span class="stat-num">3</span><span class="stat-label">Awards</span></li>
-            <li><span class="stat-num">3</span><span class="stat-label">Subteams</span></li>
-          </ul>
         </div>
-        <img class="rounded shadow" src="assets/img/team.webp" alt="Three UW MedTechRobotics members smiling beside their soft triaging robot at the Form and Function Challenge" width="984" height="651" loading="lazy" />
+        <img class="rounded shadow" src="assets/img/team.webp" alt="Three MedTech Robotics members smiling beside their soft triaging robot at the Form and Function Challenge" width="984" height="651" loading="lazy" />
       </div>
     </section>
 
@@ -90,7 +84,6 @@
     <section id="projects" class="section section-alt">
       <div class="container">
         <h2 class="section-title">Projects</h2>
-        <p class="section-sub">What we're building, and what we've built.</p>
 
         <div class="card-grid">
           <!-- Project card: copy this <article> block to add a new project.
@@ -203,21 +196,9 @@
     <section id="gallery" class="section gallery-section" hidden>
       <div class="container">
         <h2 class="section-title">Life on the Team</h2>
-        <p class="section-sub">Photos from our projects and competitions.</p>
       </div>
       <div class="gallery" aria-label="Team activity photos">
         <ul class="gallery-track"></ul>
-      </div>
-    </section>
-
-    <!-- ===================== JOIN US ===================== -->
-    <section id="join" class="section section-dark">
-      <div class="container">
-        <h2 class="section-title">Join Us</h2>
-        <p>Want to build robots that matter?</p>
-        <!-- TODO: replace href with your real application form link -->
-        <a class="btn" href="https://forms.gle/REPLACE_WITH_YOUR_FORM" target="_blank" rel="noopener">Apply now</a>
-        <p class="small muted-light">Questions first? <a href="#contact">Send us a message</a>.</p>
       </div>
     </section>
 
@@ -226,23 +207,20 @@
       <div class="container contact-wrap">
         <div>
           <h2 class="section-title">Contact</h2>
-          <p class="section-sub">
-            Have a question? Send us a message.
-          </p>
         </div>
 
         <!--
-          Web3Forms contact form.
-          Set your access key in the hidden "access_key" input below.
-          Messages are delivered to the email address linked to that key.
+          FormSubmit contact form (https://formsubmit.co).
+          Messages are emailed to the address in the action URL below.
+          The first submission triggers a one-time activation email to that address.
         -->
-        <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
-          <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
-          <input type="hidden" name="subject" value="New message from the UW MedTechRobotics website" />
-          <input type="hidden" name="from_name" value="UW MedTechRobotics Website" />
+        <form id="contact-form" class="contact-form" action="https://formsubmit.co/ajax/aghilmurugan@gmail.com" method="POST" novalidate>
+          <input type="hidden" name="_subject" value="New message from the MedTech Robotics website" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
 
           <!-- Honeypot spam field: hidden from humans, bots tend to fill it in -->
-          <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
 
           <div class="field">
             <label for="name">Name</label>
@@ -267,7 +245,7 @@
   <!-- ===================== FOOTER ===================== -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>&copy; <span id="year"></span> UW MedTechRobotics · University of Waterloo</p>
+      <p>&copy; <span id="year"></span> MedTech Robotics · University of Waterloo</p>
     </div>
   </footer>
 </body>
